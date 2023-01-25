@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+.count1{
+    display: flex;
+    grid-gap: 10px;
+   
+    border: 2px solid black;
+    outline: none;
+    padding: 50px;
+    background-color: rgb(223, 197, 165);
+    border: none;
+    border-radius: 5px;
+
+}
+.continer{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    
+}
+#count3{
+width: 500px;
+display: block;
+background-color: white;
+border: 2px solid white;
+outline: none;
+border-radius: 5px;
+box-shadow: 0px 50px 0px 0px white;
+animation-name: republic;
+animation-duration: 5s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+display: none;
+
+
+}
+@keyframes republic {
+    0%{
+opacity: 2px;
+transform: translate(0,-150%)
+    }
+   25%{
+        opacity: 12px; 
+        transform: translate(0,120%)
+    }
+    50%{
+        opacity: 20px; 
+        transform: translate(0,-130%)
+    }
+    100%{
+        opacity: 25px;
+        transform: none;
+    }
+    
+}
+
+    
+
+#h1{
+    color: white;
+    background-color: black;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBanhCpaKHwh0llD9sctuiPGu78tdRxKxmYA&usqp=CAU" alt=""width="100%" height="600px">
+    </div>
+    <div class="continer">
+    <h1>REPUBLIC DAY COMING SOON</h1>
+    <div class="count1">
+       
+        <span>days</span>
+        <h1 id="day">00</h1>
+        <span>hours</span>
+        <h1 id="hour">00</h1>
+       <span>minutes</span>
+        <h1 id="minutes">00</h1>
+        <span>seconds</span>
+        <h1 id="seconds">00</h1>
+    </div>
+   <div class="container1">
+    <h1 id="h1">suprise for you &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<button class="btn btn-primary" id="but" onclick="my()">please clik me</button> </h1>
+    <div>
+    </div>
+<div id="count3">
+   <strong>Advance Republic Day</strong> <img  src="data:image/png;base64,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" alt="">
+   </div>
+    </div>
+
+    
+    <script>
+ 
+var countdown= new Date("Jan 26,2023 00:00:00").getTime();
+setInterval(function (){
+    var now=new Date().getTime();
+    var distance= countdown - now;
+    var days=Math.floor(distance / (1000 *60 *60 *24));
+    var hou=Math.floor((distance % (1000 *60 *60 *24))/(1000 *60 *60));
+    var min=Math.floor((distance % (1000 *60 *60 ))/(1000 *60 ));
+    var sec=Math.floor((distance % (1000 *60))/(1000 ));
+   document.getElementById("day").innerHTML=days
+   document.getElementById("hour").innerHTML=hou
+   document.getElementById("minutes").innerHTML=min
+   document.getElementById("seconds").innerHTML=sec
+},1000)
+function my(){
+  document.getElementById("count3").style.display="block"
+}
+</script>
+</body>
+
+</html>
